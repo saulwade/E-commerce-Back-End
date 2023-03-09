@@ -8,19 +8,20 @@ Category.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      allowNull: false,
     },
     category_name: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   },
   {
     sequelize,
     modelName: 'category',
     timestamps: false,
+    freezeTableName: true,
     underscored: true,
-    freezeTableName: true
   }
 );
 
